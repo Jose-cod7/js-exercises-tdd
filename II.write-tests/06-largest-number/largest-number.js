@@ -6,6 +6,7 @@ function getLargestNumber(array) {
         }
     }
     console.log(largestNumber);
+    console.log(array);
     return largestNumber;
 }
 
