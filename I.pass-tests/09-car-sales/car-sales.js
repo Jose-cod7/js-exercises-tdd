@@ -1,12 +1,13 @@
-function sales(carsSold) {
-    /*var total = 0;
-        var i;
-        for (i = 0; i >= carsSold.length; i++) {
-            total += carsSold[i];
-        }*/
-    let carSales = carsSold[0].price + carsSold[4].price;
-    let carMake = carsSold[0].make;
-    console.log(`${carMake} : ${carSales}`);
-    return `${carMake} : ${carSales}`;
+function sales(carSold) {
+    const totalSales = {};
+    console.log(totalSales);
+    carSold.forEach((car) => {
+        const acumulador = totalSales[car.make] ? totalSales[car.make] : 0;
+        console.log(acumulador);
+        totalSales[car.make] = car.price + acumulador;
+        console.log(car.make);
+    });
+    console.log(totalSales);
+    return totalSales;
 }
 module.exports = sales;
